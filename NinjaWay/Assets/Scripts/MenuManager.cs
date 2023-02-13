@@ -30,6 +30,12 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Quit");
     }
 
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        Debug.Log("Menu");
+    }
+
 
 
 }
