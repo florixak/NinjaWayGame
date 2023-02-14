@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    public float speed = 5f;
+    private Player player;
+    private float speed;
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -13,8 +13,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        player = GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
+        speed = player.walkSpeed;
     }
 
     void FixedUpdate()

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-
     public void StartStory()
     {
         SceneManager.LoadScene("Game");
@@ -14,7 +13,7 @@ public class MenuManager : MonoBehaviour
 
     public void LoadStory()
     {
-        SceneManager.LoadScene("Load");
+        SceneManager.LoadScene("Game");
         Debug.Log("Load game");
     }
 
