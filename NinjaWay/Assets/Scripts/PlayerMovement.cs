@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movement;
 
+    private bool sprinting = false;
+
     void Start()
     {
         player = GetComponent<Player>();
@@ -29,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement != Vector2.zero)
         {
+            if (Input.GetKey(KeyCode.LeftShift)) sprinting = true;
+            else sprinting = false;
             Move();
             anim.SetFloat("Horizontal", movement.x);
             anim.SetFloat("Vertical", movement.y);
@@ -42,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (sprinting) speed = player.sprintSpeed;
+        else speed = player.walkSpeed;
         rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
     }
 }

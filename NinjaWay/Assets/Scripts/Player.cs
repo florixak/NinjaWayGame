@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public int health = 20;
     public int force = 5;
     public float walkSpeed = 5;
+    public float sprintSpeed = 7;
+    public bool sprinting = false;
 
     public void SavePlayer()
     {
