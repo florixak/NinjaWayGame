@@ -11,6 +11,6 @@ public class PressButtonText : MonoBehaviour
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-        text.text = "[ " + keyToPress + " ]";
+        text.text = "[" + keyToPress + "]";
     }
 }

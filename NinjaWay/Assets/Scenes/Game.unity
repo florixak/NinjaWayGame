@@ -37447,6 +37447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Load
       objectReference: {fileID: 0}
+    - target: {fileID: 2132675295430132825, guid: 621695d84491ffa479c1aa9273e94b10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2132675295430132903, guid: 621695d84491ffa479c1aa9273e94b10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -38385,6 +38389,10 @@ PrefabInstance:
     - target: {fileID: 2132675295430132825, guid: 621695d84491ffa479c1aa9273e94b10, type: 3}
       propertyPath: m_Name
       value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132675295430132825, guid: 621695d84491ffa479c1aa9273e94b10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2132675295430132903, guid: 621695d84491ffa479c1aa9273e94b10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -41566,6 +41574,10 @@ PrefabInstance:
     - target: {fileID: 5876318352691276387, guid: 98dd266559bcca349b2e4ac574598404, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5876318352691276396, guid: 98dd266559bcca349b2e4ac574598404, type: 3}
+      propertyPath: keyToPress
+      value: B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98dd266559bcca349b2e4ac574598404, type: 3}
