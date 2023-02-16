@@ -4,49 +4,37 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public class SaveSystem : MonoBehaviour
+public static class SaveSystem
 {
-    public Data data;
+    private static string path = Application.persistentDataPath + "/player.data";
 
-    private void Awake()
+    public static void SavePlayer(Player player)
     {
-        LoadGame();
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        Data data = new Data(player);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
     }
 
-    public void LoadGame()
+    public static Data LoadData()
     {
-        FileStream fs = new FileStream(Application.persistentDataPath + "/SaveGame.sav", FileMode.Open);
-        BinaryFormatter bf = new BinaryFormatter();
-
-        try
+        if (File.Exists(path))
         {
-            data = (Data) bf.Deserialize(fs);
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            Data data = (Data) formatter.Deserialize(stream);
+            stream.Close();
+            return data;
         }
-        catch
+        else
         {
-            Debug.Log("Failed to load!");
+            Debug.LogError("File not found...");
+            return null;
         }
-        finally { fs.Close(); }
     }
-
-    public void SaveGame()
-    {
-        FileStream fs = new FileStream(Application.persistentDataPath + "/SaveGame.sav", FileMode.Create);
-        BinaryFormatter bf = new BinaryFormatter();
-        try
-        {
-            bf.Serialize(fs, data);
-        } 
-        catch
-        {
-            Debug.Log("Failed to serialize!");
-        }
-        finally { fs.Close(); }
-    }
-
-    private void OnDestroy()
-    {
-        SaveGame();
-    }
-
+    
 }
