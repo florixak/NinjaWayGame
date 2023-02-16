@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trees
+  - Houses
   layers:
   - Default
   - TransparentFX
@@ -11,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Trees
+  - Houses
   - 
   - 
   - 
@@ -46,4 +48,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3127283603
+    locked: 0
+  - name: Houses
+    uniqueID: 1072201491
+    locked: 0
+  - name: Trees
+    uniqueID: 2304718549
     locked: 0

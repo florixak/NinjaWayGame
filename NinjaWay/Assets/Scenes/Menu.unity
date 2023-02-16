@@ -1463,6 +1463,8 @@ MonoBehaviour:
   health: 20
   force: 5
   walkSpeed: 5
+  sprintSpeed: 7
+  sprinting: 0
 --- !u!4 &1327745803
 Transform:
   m_ObjectHideFlags: 0
@@ -1911,7 +1913,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eba9b82a4b5285249b6af0230ff95276, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef9807e2974e83343ac51ad128b7a224, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

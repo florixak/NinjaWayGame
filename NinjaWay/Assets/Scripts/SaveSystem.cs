@@ -1,39 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public static class SaveSystem
+public class SaveSystem : MonoBehaviour
 {
-    public static string path = Application.persistentDataPath + "/player.data"; // .data or .fun it doesnt matter
+    public Data data;
 
-    public static void SavePlayer(Player player)
+    private void Awake()
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        PlayerData data = new PlayerData(player);
-        
-        formatter.Serialize(stream, data);
-        stream.Close();
+        LoadGame();
     }
 
-    public static PlayerData LoadPlayer()
+    public void LoadGame()
     {
+        FileStream fs = new FileStream(Application.persistentDataPath + "/SaveGame.sav", FileMode.Open);
+        BinaryFormatter bf = new BinaryFormatter();
 
-        if (File.Exists(path))
+        try
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
-            stream.Close();
-
-            return data;
+            data = (Data) bf.Deserialize(fs);
         }
-        else
+        catch
         {
-            Debug.LogError("Save file not found in " + path);
-            return null;
+            Debug.Log("Failed to load!");
         }
+        finally { fs.Close(); }
     }
+
+    public void SaveGame()
+    {
+        FileStream fs = new FileStream(Application.persistentDataPath + "/SaveGame.sav", FileMode.Create);
+        BinaryFormatter bf = new BinaryFormatter();
+        try
+        {
+            bf.Serialize(fs, data);
+        } 
+        catch
+        {
+            Debug.Log("Failed to serialize!");
+        }
+        finally { fs.Close(); }
+    }
+
+    private void OnDestroy()
+    {
+        SaveGame();
+    }
+
 }
