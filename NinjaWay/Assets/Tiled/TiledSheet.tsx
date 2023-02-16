@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.9" tiledversion="1.9.2" name="TiledSheet" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
  <image source="../Art/Overworld.png" width="640" height="576"/>
+ <tile id="73">
+  <objectgroup draworder="index" id="2">
+   <object id="4" x="0.290664" y="3.1973">
+    <polygon points="0,0 3.6333,-2.03465 8.42925,-1.74398 12.4985,-1.16266 15.4052,-0.581328 15.6958,2.61597 12.7892,5.81328 8.13859,7.55726 2.47064,5.95861"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="74">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0.145332" y="3.48797">
+    <polygon points="0,0 3.6333,-2.03465 8.42925,-1.74398 12.4985,-1.16266 15.4052,-0.581328 15.6958,2.61597 12.7892,5.81328 8.13859,7.55726 2.47064,5.95861"/>
+   </object>
+  </objectgroup>
+ </tile>
  <tile id="84">
   <objectgroup draworder="index" id="2">
    <object id="2" x="5.875" y="-0.0625">
@@ -44,6 +58,11 @@
  <tile id="90">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="7.0625" width="9.625" height="8.9375"/>
+  </objectgroup>
+ </tile>
+ <tile id="112">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="3.32531" y="3.77863" width="9.34938" height="9.76805"/>
   </objectgroup>
  </tile>
  <tile id="114">
@@ -118,6 +137,20 @@
   <objectgroup draworder="index" id="2">
    <object id="1" x="9" y="0.0625">
     <polyline points="0,0 -1.0625,11.875 -2.1875,12.875 -9,11.9375"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="186">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1.01732" y="8.13859">
+    <polygon points="0,0 0,7.99326 13.3705,7.84792 13.2252,6.8306"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="187">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1.16266" y="15.5505">
+    <polygon points="0,0 12.7892,-7.70259 12.6439,0.145332"/>
    </object>
   </objectgroup>
  </tile>
@@ -203,6 +236,16 @@
    <object id="1" x="3.0625" y="8.125" width="10.625" height="4.4375"/>
   </objectgroup>
  </tile>
+ <tile id="226">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="0" width="12.9654" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="227">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="0" width="12.6747" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="228">
   <objectgroup draworder="index" id="2">
    <object id="1" x="2.8125" y="-0.25">
@@ -257,6 +300,16 @@
    </object>
   </objectgroup>
  </tile>
+ <tile id="266">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="0" width="12.9654" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="267">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="0" width="12.82" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="282">
   <objectgroup draworder="index" id="2">
    <object id="1" x="10.75" y="-0.0625" width="5.25" height="16"/>
@@ -279,6 +332,31 @@
    <object id="2" x="14.9565" y="0.0434783">
     <polyline points="0,0 -0.0434783,0.956522 -3.08696,6.91304 -4.04348,14 -5.13043,15.1304 -12.087,14.1739 -14.913,12.913"/>
    </object>
+  </objectgroup>
+ </tile>
+ <tile id="306">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="0" width="12.9654" height="7.96535"/>
+  </objectgroup>
+ </tile>
+ <tile id="307">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="1" y="0" width="13.1107" height="7.96535"/>
+  </objectgroup>
+ </tile>
+ <tile id="308">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="3" y="0" width="13" height="11.6747"/>
+  </objectgroup>
+ </tile>
+ <tile id="309">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="14"/>
+  </objectgroup>
+ </tile>
+ <tile id="310">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="12.82" height="11.9654"/>
   </objectgroup>
  </tile>
  <tile id="322">
