@@ -15,12 +15,12 @@ public class Player : MonoBehaviour
 
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(this);
+        SaveSystem.SaveGame(this);
     }
 
     public void LoadPlayer()
     {
-        Data data = SaveSystem.LoadData();
+        Data data = SaveSystem.LoadGame();
 
         level = data.level;
         health = data.health;

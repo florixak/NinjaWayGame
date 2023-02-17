@@ -8,7 +8,7 @@ public static class SaveSystem
 {
     private static string path = Application.persistentDataPath + "/player.data";
 
-    public static void SavePlayer(Player player)
+    public static void SaveGame(Player player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(path, FileMode.Create);
@@ -19,7 +19,7 @@ public static class SaveSystem
         stream.Close();
     }
 
-    public static Data LoadData()
+    public static Data LoadGame()
     {
         if (File.Exists(path))
         {
