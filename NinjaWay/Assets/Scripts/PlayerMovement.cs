@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (PauseManager.GameIsPaused) return;
+
         movement = Vector2.zero;
 
         movement.x = Input.GetAxisRaw("Horizontal");
