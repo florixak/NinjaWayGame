@@ -6,11 +6,16 @@ using UnityEngine;
 public class PressButtonText : MonoBehaviour
 {
     private TextMeshProUGUI text;
+    public bool isEnabled;
     public string keyToPress;
-
+ 
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        text.text = "[" + keyToPress + "]";
+        if (isEnabled)
+        {
+            text = GetComponent<TextMeshProUGUI>();
+            text.text = "[" + keyToPress + "]";
+        }
+        
     }
 }
